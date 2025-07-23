@@ -3,15 +3,15 @@
 	"id": "enhanced-farming",
 	"version": "${version}",
 	"name": "Enhanced Farming",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Enhancing the vanilla farming experience",
 	"authors": [
-		"Me!"
+		"https://github.com/Joey-2134"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Joey-2134",
+		"sources": "https://github.com/Joey-2134/Enhanced-Minecraft"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/enhanced-farming/icon.png",
 	"environment": "*",
 	"entrypoints": {
