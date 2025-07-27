@@ -1,6 +1,9 @@
 package com.enhancedfarming.items;
 
 import com.enhancedfarming.EnhancedFarming;
+import com.enhancedfarming.interfaces.ItemSettings;
+import com.enhancedfarming.items.settings.FertilizerSettings;
+import com.enhancedfarming.items.settings.RottenAppleSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
@@ -14,14 +17,10 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
-import static com.enhancedfarming.items.settings.RottenAppleSettings.POISON_FOOD_COMPONENT;
-import static com.enhancedfarming.items.settings.RottenAppleSettings.POISON_FOOD_CONSUMABLE_COMPONENT;
-
 public class ModItems {
 
-    public static final Item FERTILIZER = register("fertilizer", FertilizerItem::new, new Item.Settings());
-    public static final Item ROTTEN_APPLE = register("rotten_apple", RottenAppleItem::new, new Item.Settings()
-            .food(POISON_FOOD_COMPONENT, POISON_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item FERTILIZER = register("fertilizer", FertilizerItem::new, FertilizerSettings.getSettings());
+    public static final Item ROTTEN_APPLE = register("rotten_apple", RottenAppleItem::new, RottenAppleSettings.getSettings());
 
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {

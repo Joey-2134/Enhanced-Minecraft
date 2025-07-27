@@ -1,12 +1,14 @@
 package com.enhancedfarming.items.settings;
 
+import com.enhancedfarming.interfaces.ItemSettings;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 
-public class RottenAppleSettings {
+public class RottenAppleSettings implements ItemSettings {
 
     public static final ConsumableComponent POISON_FOOD_CONSUMABLE_COMPONENT = ConsumableComponent.builder()
             .consumeEffect(
@@ -19,4 +21,9 @@ public class RottenAppleSettings {
             .saturationModifier(2)
             .nutrition(4)
             .build();
+
+    public static Item.Settings getSettings() {
+        return new Item.Settings()
+                .food(POISON_FOOD_COMPONENT, POISON_FOOD_CONSUMABLE_COMPONENT);
+    }
 }
