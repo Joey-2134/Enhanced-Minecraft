@@ -1,3 +1,6 @@
 {
-  "item.enhanced-farming.fertilizer": "Fertilizer"
+  "item.enhanced-farming.fertilizer": "Fertilizer",
+  "item.enhanced-farming.fertilizer.tooltip": "Speeds up crop growth",
+  "item.enhanced-farming.rotten_apple": "Rotten Apple",
+  "item.enhanced-farming.rotten_apple.tooltip": "No longer edible, can be composted"
 }
