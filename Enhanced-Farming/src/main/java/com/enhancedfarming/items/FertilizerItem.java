@@ -22,6 +22,7 @@ public class FertilizerItem extends Item {
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();
         BlockPos blockPos2 = blockPos.offset(context.getSide());
+
         if (useOnFertilizable(context.getStack(), world, blockPos)) {
             if (!world.isClient) {
                 context.getPlayer().emitGameEvent(GameEvent.ITEM_INTERACT_FINISH);

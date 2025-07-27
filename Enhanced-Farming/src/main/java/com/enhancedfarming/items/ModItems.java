@@ -2,21 +2,18 @@ package com.enhancedfarming.items;
 
 import com.enhancedfarming.items.settings.FertilizerSettings;
 import com.enhancedfarming.items.settings.RottenAppleSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.function.Function;
 
-import static com.enhancedfarming.EnhancedFarming.MOD_ID;
+import static com.enhancedfarming.EnhancedFarming.*;
 
 public class ModItems {
 
@@ -24,16 +21,10 @@ public class ModItems {
     public static final Item FERTILIZER = register("fertilizer", FertilizerItem::new, FertilizerSettings.getSettings());
     public static final Item ROTTEN_APPLE = register("rotten_apple", RottenAppleItem::new, RottenAppleSettings.getSettings());
 
-    public static final RegistryKey<ItemGroup> ENHANCED_FARMING_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MOD_ID, "item_group"));
-    public static final ItemGroup ENHANCED_FARMING_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModItems.FERTILIZER))
-            .displayName(Text.translatable("itemGroup.enhanced-farming-group"))
-            .build();
-
     /**
         Add all mod items here
      */
-    private static final List<Item> ENHANCED_FARMING_ITEMS = List.of(
+    public static final List<Item> ENHANCED_FARMING_ITEMS = List.of(
             FERTILIZER,
             ROTTEN_APPLE
     );
@@ -47,17 +38,7 @@ public class ModItems {
     }
 
     public static void initialize() {
-        addModItemsToCustomModGroup();
         CompostingChanceRegistry.INSTANCE.add(ROTTEN_APPLE, 0.3f);
-    }
-
-    /**
-     * Creates custom item group and adds all mod items to it
-     */
-    private static void addModItemsToCustomModGroup() {
-        Registry.register(Registries.ITEM_GROUP, ENHANCED_FARMING_GROUP_KEY, ENHANCED_FARMING_GROUP);
-        ItemGroupEvents.modifyEntriesEvent(ENHANCED_FARMING_GROUP_KEY)
-                .register(itemGroup -> ModItems.ENHANCED_FARMING_ITEMS.forEach(itemGroup::add));
     }
 
 }
