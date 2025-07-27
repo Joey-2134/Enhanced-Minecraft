@@ -30,6 +30,9 @@ public class ModItems {
             .displayName(Text.translatable("itemGroup.enhanced-farming-group"))
             .build();
 
+    /**
+        Add all mod items here
+     */
     private static final List<Item> ENHANCED_FARMING_ITEMS = List.of(
             FERTILIZER,
             ROTTEN_APPLE
@@ -48,6 +51,9 @@ public class ModItems {
         CompostingChanceRegistry.INSTANCE.add(ROTTEN_APPLE, 0.3f);
     }
 
+    /**
+     * Creates custom item group and adds all mod items to it
+     */
     private static void addModItemsToCustomModGroup() {
         Registry.register(Registries.ITEM_GROUP, ENHANCED_FARMING_GROUP_KEY, ENHANCED_FARMING_GROUP);
         ItemGroupEvents.modifyEntriesEvent(ENHANCED_FARMING_GROUP_KEY)
