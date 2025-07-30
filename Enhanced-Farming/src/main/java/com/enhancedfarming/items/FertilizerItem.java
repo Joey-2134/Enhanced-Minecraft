@@ -14,7 +14,8 @@ import static net.minecraft.item.BoneMealItem.useOnGround;
 
 public class FertilizerItem extends Item {
 
-    public static final String NAME = "Fertilizer";
+    public static final String FERTILIZER_ITEM_NAME = "Fertilizer";
+    public static final String FERTILIZER_TOOLTIP = "item.enhanced-farming.fertilizer.tooltip";
 
     public FertilizerItem(Settings settings) {
         super(settings);

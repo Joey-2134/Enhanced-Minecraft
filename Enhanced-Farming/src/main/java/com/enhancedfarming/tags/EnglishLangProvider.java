@@ -13,8 +13,13 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.enhancedfarming.EnhancedFarming.ENHANCED_FARMING_GROUP_KEY;
 import static com.enhancedfarming.EnhancedFarming.MOD_NAME;
+import static com.enhancedfarming.advancements.AdvancementProvider.GET_FERTILIZER_DESCRIPTION;
+import static com.enhancedfarming.advancements.AdvancementProvider.GET_FERTILIZER_TITLE;
+import static com.enhancedfarming.items.FertilizerItem.FERTILIZER_TOOLTIP;
+import static com.enhancedfarming.items.RottenAppleItem.ROTTEN_APPLE_TOOLTIP;
 
 public class EnglishLangProvider extends FabricLanguageProvider {
+
     public EnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
@@ -25,18 +30,22 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ENHANCED_FARMING_GROUP_KEY, MOD_NAME);
         
         // Blocks
-        translationBuilder.add(ModBlocks.FERTILIZED_FARMLAND, FertilizedFarmland.NAME);
+        translationBuilder.add(ModBlocks.FERTILIZED_FARMLAND, FertilizedFarmland.FERTILIZED_FARMLAND_BLOCK_NAME);
 
         // Blocks (as Item)
-        translationBuilder.add(ModBlocks.FERTILIZED_FARMLAND.asItem(), FertilizedFarmland.NAME);
+        translationBuilder.add(ModBlocks.FERTILIZED_FARMLAND.asItem(), FertilizedFarmland.FERTILIZED_FARMLAND_BLOCK_NAME);
 
         // Items
-        translationBuilder.add(ModItems.FERTILIZER, FertilizerItem.NAME);
-        translationBuilder.add(ModItems.ROTTEN_APPLE, RottenAppleItem.NAME);
+        translationBuilder.add(ModItems.FERTILIZER, FertilizerItem.FERTILIZER_ITEM_NAME);
+        translationBuilder.add(ModItems.ROTTEN_APPLE, RottenAppleItem.ROTTEN_APPLE_ITEM_NAME);
 
         // Tooltips
-        translationBuilder.add("item.enhanced-farming.rotten_apple.tooltip", "No longer edible, can be composted");
-        translationBuilder.add("item.enhanced-farming.fertilizer.tooltip", "Speeds up crop growth");
+        translationBuilder.add(ROTTEN_APPLE_TOOLTIP, "No longer edible, can be composted");
+        translationBuilder.add(FERTILIZER_TOOLTIP, "Speeds up crop growth");
+
+        //Advancements
+        translationBuilder.add(GET_FERTILIZER_TITLE, "Fertilizer");
+        translationBuilder.add(GET_FERTILIZER_DESCRIPTION, "Acquire fertilizer to speed up crop growth");
 
     }
 }

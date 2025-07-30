@@ -1,5 +1,6 @@
 package com.enhancedfarming;
 
+import com.enhancedfarming.advancements.AdvancementProvider;
 import com.enhancedfarming.tags.EnglishLangProvider;
 import com.enhancedfarming.tags.FertilizableBlockTag;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -17,5 +18,7 @@ public class EnhancedFarmingDataGenerator implements DataGeneratorEntrypoint {
 		);
 
 		pack.addProvider(EnglishLangProvider::new);
+		pack.addProvider(AdvancementProvider::new);
+
 	}
 }
