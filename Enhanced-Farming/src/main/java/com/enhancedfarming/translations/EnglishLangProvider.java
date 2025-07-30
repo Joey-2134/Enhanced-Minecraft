@@ -1,4 +1,4 @@
-package com.enhancedfarming.tags;
+package com.enhancedfarming.translations;
 
 import com.enhancedfarming.blocks.FertilizedFarmland;
 import com.enhancedfarming.blocks.ModBlocks;
