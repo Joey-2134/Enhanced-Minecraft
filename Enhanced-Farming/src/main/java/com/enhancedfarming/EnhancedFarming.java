@@ -21,6 +21,8 @@ import static com.enhancedfarming.items.ModItems.ENHANCED_FARMING_ITEMS;
 
 public class EnhancedFarming implements ModInitializer {
 	public static final String MOD_ID = "enhanced-farming";
+	public static final String MOD_NAME = "Enhanced Farming";
+
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final RegistryKey<ItemGroup> ENHANCED_FARMING_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MOD_ID, "item_group"));
