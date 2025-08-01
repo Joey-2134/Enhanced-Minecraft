@@ -1,6 +1,7 @@
 package com.enhancedfarming;
 
 import com.enhancedfarming.advancements.AdvancementProvider;
+import com.enhancedfarming.blocks.BlockModelProvider;
 import com.enhancedfarming.recipes.RecipeProvider;
 import com.enhancedfarming.translations.EnglishLangProvider;
 import com.enhancedfarming.tags.FertilizableBlockTag;
@@ -21,6 +22,7 @@ public class EnhancedFarmingDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(EnglishLangProvider::new);
 		pack.addProvider(AdvancementProvider::new);
 		pack.addProvider(RecipeProvider::new);
+		pack.addProvider(BlockModelProvider::new);
 
 	}
 }
