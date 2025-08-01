@@ -23,6 +23,6 @@ public class BlockModelProvider extends FabricModelProvider {
 
     @Override
     public String getName() {
-        return MOD_ID + "-recipe-provider";
+        return MOD_ID + "-block-model-provider";
     }
 }

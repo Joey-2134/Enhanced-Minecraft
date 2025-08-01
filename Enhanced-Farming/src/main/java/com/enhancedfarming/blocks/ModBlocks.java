@@ -1,6 +1,7 @@
 package com.enhancedfarming.blocks;
 
 import com.enhancedfarming.blocks.settings.FertilizedFarmlandSettings;
+import com.enhancedfarming.blocks.settings.SprinklerSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -23,11 +24,18 @@ public class ModBlocks {
             true
     );
 
+    public static final Block SPRINKLER = register("sprinkler",
+            Sprinkler::new,
+            SprinklerSettings.getSettings(),
+            true
+    );
+
     /**
      Add all mod blocks here
      */
     public static final List<Block> ENHANCED_FARMING_BLOCKS = List.of(
-            FERTILIZED_FARMLAND
+            FERTILIZED_FARMLAND,
+            SPRINKLER
     );
 
     private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
