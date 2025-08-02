@@ -1,5 +1,6 @@
 package com.enhancedfarming;
 
+import com.enhancedfarming.blocks.ModBlockEntities;
 import com.enhancedfarming.blocks.ModBlocks;
 import com.enhancedfarming.items.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -36,6 +37,7 @@ public class EnhancedFarming implements ModInitializer {
 		LOGGER.info("Initializing {}", MOD_ID);
 		ModItems.initialize();
 		ModBlocks.initialize();
+		ModBlockEntities.initialize();
 
 		addModItemsToCustomModGroup();
 	}

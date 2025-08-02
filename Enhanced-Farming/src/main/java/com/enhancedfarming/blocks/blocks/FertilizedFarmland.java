@@ -1,4 +1,4 @@
-package com.enhancedfarming.blocks;
+package com.enhancedfarming.blocks.blocks;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.FarmlandBlock;

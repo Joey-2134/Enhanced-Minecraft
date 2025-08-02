@@ -1,5 +1,7 @@
 package com.enhancedfarming.blocks;
 
+import com.enhancedfarming.blocks.blocks.FertilizedFarmland;
+import com.enhancedfarming.blocks.blocks.Sprinkler;
 import com.enhancedfarming.blocks.settings.FertilizedFarmlandSettings;
 import com.enhancedfarming.blocks.settings.SprinklerSettings;
 import net.minecraft.block.*;

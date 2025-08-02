@@ -1,8 +1,8 @@
 package com.enhancedfarming.translations;
 
-import com.enhancedfarming.blocks.FertilizedFarmland;
+import com.enhancedfarming.blocks.blocks.FertilizedFarmland;
 import com.enhancedfarming.blocks.ModBlocks;
-import com.enhancedfarming.blocks.Sprinkler;
+import com.enhancedfarming.blocks.blocks.Sprinkler;
 import com.enhancedfarming.items.FertilizerItem;
 import com.enhancedfarming.items.ModItems;
 import com.enhancedfarming.items.RottenAppleItem;
@@ -32,11 +32,11 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         
         // Blocks
         translationBuilder.add(ModBlocks.FERTILIZED_FARMLAND, FertilizedFarmland.FERTILIZED_FARMLAND_BLOCK_NAME);
-        translationBuilder.add(ModBlocks.SPRINKLER, Sprinkler.SPRINKLER_BLOCK_NAME);
+        translationBuilder.add(ModBlocks.SPRINKLER, Sprinkler.SPRINKLER_BLOCK_TRANSLATION);
 
         // Blocks (as Item)
         translationBuilder.add(ModBlocks.FERTILIZED_FARMLAND.asItem(), FertilizedFarmland.FERTILIZED_FARMLAND_BLOCK_NAME);
-        translationBuilder.add(ModBlocks.SPRINKLER.asItem(), Sprinkler.SPRINKLER_BLOCK_NAME);
+        translationBuilder.add(ModBlocks.SPRINKLER.asItem(), Sprinkler.SPRINKLER_BLOCK_TRANSLATION);
 
         // Items
         translationBuilder.add(ModItems.FERTILIZER, FertilizerItem.FERTILIZER_ITEM_NAME);
