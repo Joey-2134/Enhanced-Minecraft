@@ -7,7 +7,7 @@ public class FertilizedFarmland extends FarmlandBlock {
 
     public static final String FERTILIZED_FARMLAND_BLOCK_NAME = "Fertilized Farmland";
 
-    public FertilizedFarmland(AbstractBlock.Settings settings) {
+    public FertilizedFarmland(Settings settings) {
         super(settings);
     }
 }

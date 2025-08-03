@@ -23,7 +23,7 @@ public class Sprinkler extends BlockWithEntity {
     public static final String SPRINKLER_BLOCK_TRANSLATION = "Sprinkler";
     public static final String SPRINKLER_BLOCK_IDENTIFIER = "sprinkler";
 
-    private static final VoxelShape SHAPE = Block.createColumnShape(10.0, 0.0, 6.0);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 6.0, 11.0);
 
     public Sprinkler(Settings settings) {
         super(settings);
