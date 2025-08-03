@@ -18,23 +18,19 @@
 		"main": [
 			"com.enhancedfarming.EnhancedFarming"
 		],
-		"client": [
-			"com.enhancedfarming.EnhancedFarmingClient"
-		],
 		"fabric-datagen": [
 			"com.enhancedfarming.EnhancedFarmingDataGenerator"
+		],
+		"client": [
+			"com.enhancedfarming.EnhancedFarmingClient"
 		]
 	},
 	"mixins": [
-		"enhanced-farming.mixins.json",
-		{
-			"config": "enhanced-farming.client.mixins.json",
-			"environment": "client"
-		}
+		"enhanced-farming.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.4",
+		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

@@ -1,6 +1,6 @@
 package com.enhancedfarming.advancements;
 
-import com.enhancedfarming.items.ModItems;
+import com.enhancedfarming.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
@@ -30,7 +30,7 @@ public class AdvancementProvider extends FabricAdvancementProvider {
     public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
         AdvancementEntry getFertilizer = Advancement.Builder.create()
                 .display(
-                        ModItems.FERTILIZER,
+                        ModItems.FERTILIZER_ITEM,
                         Text.translatable(GET_FERTILIZER_TITLE), // Title
                         Text.translatable(GET_FERTILIZER_DESCRIPTION), // Description
                         Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
@@ -40,7 +40,7 @@ public class AdvancementProvider extends FabricAdvancementProvider {
                         false
                 )
                 // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
-                .criterion("got_fertilizer", InventoryChangedCriterion.Conditions.items(ModItems.FERTILIZER))
+                .criterion("got_fertilizer", InventoryChangedCriterion.Conditions.items(ModItems.FERTILIZER_ITEM))
                 // Give the advancement an id
                 .build(consumer, MOD_ID + ":get_fertilizer");
     }
