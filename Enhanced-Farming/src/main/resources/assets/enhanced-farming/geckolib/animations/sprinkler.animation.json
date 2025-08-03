@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"rotate": {
+					"rotation": {
+						"vector": [0, "query.anim_time * 90", 0]
+					}
+				},
+				"cap": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"2.9583": {
+							"vector": [0, 0, 0]
+						},
+						"3.9167": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
