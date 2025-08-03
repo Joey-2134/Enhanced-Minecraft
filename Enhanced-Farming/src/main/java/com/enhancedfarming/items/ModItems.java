@@ -1,7 +1,9 @@
 package com.enhancedfarming.items;
 
+import com.enhancedfarming.blocks.ModBlocks;
 import com.enhancedfarming.items.settings.FertilizerSettings;
 import com.enhancedfarming.items.settings.RottenAppleSettings;
+import com.enhancedfarming.items.settings.SprinklerItemSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -20,13 +22,15 @@ public class ModItems {
 
     public static final Item FERTILIZER = register("fertilizer", FertilizerItem::new, FertilizerSettings.getSettings());
     public static final Item ROTTEN_APPLE = register("rotten_apple", RottenAppleItem::new, RottenAppleSettings.getSettings());
+    public static final Item SPRINKLER_ITEM = register("sprinkler_item", settings -> new SprinklerItem(ModBlocks.SPRINKLER, settings), SprinklerItemSettings.getSettings());
 
     /**
         Add all mod items here
      */
     public static final List<Item> ENHANCED_FARMING_ITEMS = List.of(
             FERTILIZER,
-            ROTTEN_APPLE
+            ROTTEN_APPLE,
+            SPRINKLER_ITEM
     );
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {

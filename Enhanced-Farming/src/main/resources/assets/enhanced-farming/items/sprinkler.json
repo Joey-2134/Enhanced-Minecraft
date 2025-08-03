@@ -1,6 +1,9 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "enhanced-farming:block/sprinkler"
+    "type": "minecraft:special",
+    "base": "enhanced-farming:item/sprinkler",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
   }
 }
